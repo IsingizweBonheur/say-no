@@ -4,6 +4,7 @@ import Hero from "./hero";
 import Stats from "./stats";
 import Choose from "./choose";
 import Campaigns from "./compain";
+import Vision from "../pages/vision"
 import Footer from "./footer";
 export default function Home(){
     return(
@@ -13,6 +14,7 @@ export default function Home(){
             <Stats />
             <Choose />
             <Campaigns />
+            <Vision />
             <Footer />
         </div>
     )
