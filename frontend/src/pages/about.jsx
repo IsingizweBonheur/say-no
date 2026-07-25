@@ -7,8 +7,8 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 import hero from "../assets/hero.jpeg"
-import Navbar from "../component/Navbar";
-import Footer from "../component/Footer";
+import Navbar from "../component/navbar";
+import Footer from "../component/footer";
 import Vision from "./vision";
 import Leader from "./leader";
 
