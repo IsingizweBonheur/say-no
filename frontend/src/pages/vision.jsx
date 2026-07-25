@@ -218,37 +218,6 @@ export default function Vision() {
         </div>
       </section>
 
-      {/* CALL TO ACTION */}
-      <section className="py-20 px-6 bg-[#06283D]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto text-center text-white"
-        >
-          <FaRocket className="text-5xl mx-auto mb-6 text-white/60" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Movement</h2>
-          <p className="text-gray-200 text-lg mb-8 leading-relaxed">
-            Since 2026, we've been building a drug-free generation. Be part of the change.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a
-              href="/programs"
-              className="bg-white text-[#06283D] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors duration-300"
-            >
-              Explore Our Programs
-            </a>
-            <a
-              href="/get-involved"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-[#06283D] transition-colors duration-300"
-            >
-              Get Involved
-            </a>
-          </div>
-        </motion.div>
-      </section>
-
     </div>
   );
 }

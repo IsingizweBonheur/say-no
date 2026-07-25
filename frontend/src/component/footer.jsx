@@ -153,7 +153,7 @@ export default function Footer() {
 
 
               <a
-                href="#"
+                href="https://www.instagram.com/antidrugs2026/"
                 className="
                   w-10
                   h-10
