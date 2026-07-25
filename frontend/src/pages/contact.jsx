@@ -11,28 +11,24 @@ import {
 import Navbar from "../component/navbar";
 import Footer from "../component/footer";
 
-
 export default function Contact() {
 
-
-  const [form,setForm] = useState({
-    name:"",
-    email:"",
-    message:"",
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
   });
 
 
-
-  const handleChange = (e)=>{
+  const handleChange = (e) => {
     setForm({
       ...form,
-      [e.target.name]:e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
 
-
-  const handleSubmit=(e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     alert("Thank you! Your message has been sent.");
@@ -45,9 +41,7 @@ export default function Contact() {
   };
 
 
-
-  const contactInfo=[
-
+  const contactInfo = [
     {
       icon:<FaPhoneAlt/>,
       title:"Call Us",
@@ -55,14 +49,12 @@ export default function Contact() {
       link:"tel:+250788628312"
     },
 
-
     {
       icon:<FaEnvelope/>,
-      title:"Email Us",
+      title:"Email",
       text:"your-email@gmail.com",
       link:"mailto:your-email@gmail.com"
     },
-
 
     {
       icon:<FaMapMarkerAlt/>,
@@ -70,462 +62,267 @@ export default function Contact() {
       text:"Rwanda",
       link:"#"
     }
-
   ];
-
 
 
   return (
 
     <>
+      <Navbar />
 
-    <Navbar />
 
+      <section className="bg-gray-50 min-h-screen pt-24">
 
 
-    {/* HERO */}
+        {/* DARK BLUE HEADER */}
 
-    <section className="
-      relative
-      bg-[#06283D]
-      text-white
-      py-28
-      overflow-hidden
-    ">
+        <div className="bg-[#06283D] py-20 px-6 relative overflow-hidden">
 
+          <div className="absolute inset-0 bg-gradient-to-r from-[#06283D] via-[#0B3954] to-[#06283D] opacity-90"></div>
 
-      <div className="
-        absolute
-        inset-0
-        bg-gradient-to-r
-        from-[#06283D]
-        via-[#0B3954]
-        to-[#06283D]
-      "></div>
 
+          <div className="relative max-w-6xl mx-auto text-center text-white">
 
+            <motion.h1
+              initial={{opacity:0,y:40}}
+              animate={{opacity:1,y:0}}
+              transition={{duration:.7}}
+              className="text-4xl md:text-6xl font-extrabold"
+            >
+              Get In Touch
+            </motion.h1>
 
-      <motion.div
 
-        initial={{
-          opacity:0,
-          y:40
-        }}
-
-        animate={{
-          opacity:1,
-          y:0
-        }}
-
-        transition={{
-          duration:.8
-        }}
-
-        className="
-          relative
-          max-w-6xl
-          mx-auto
-          px-6
-          text-center
-        "
-
-      >
-
-
-        <h1 className="
-          text-5xl
-          md:text-6xl
-          font-extrabold
-          mt-5
-        ">
-          Get In Touch
-        </h1>
-
-
-
-        <p className="
-          max-w-3xl
-          mx-auto
-          mt-6
-          text-gray-200
-          text-lg
-          leading-8
-        ">
-          Have questions, want to support our mission,
-          or join our awareness programs? We are here to listen.
-        </p>
-
-
-
-      </motion.div>
-
-
-
-      {/* Curve */}
-
-      <div className="
-        absolute
-        bottom-0
-        left-0
-        w-full
-        h-14
-        bg-gray-50
-        rounded-t-[50%]
-      "></div>
-
-
-    </section>
-
-
-
-
-
-    {/* CONTENT */}
-
-
-    <section className="
-      bg-gray-50
-      py-20
-    ">
-
-
-      <div className="
-        max-w-7xl
-        mx-auto
-        px-6
-      ">
-
-
-        <div className="
-          grid
-          lg:grid-cols-2
-          gap-12
-          items-start
-        ">
-
-
-
-
-        {/* CONTACT INFO */}
-
-
-        <motion.div
-
-          initial={{
-            opacity:0,
-            x:-40
-          }}
-
-          whileInView={{
-            opacity:1,
-            x:0
-          }}
-
-          transition={{
-            duration:.7
-          }}
-
-        >
-
-
-          <span className="
-            text-green-600
-            uppercase
-            tracking-widest
-            font-semibold
-          ">
-            Contact Information
-          </span>
-
-
-
-          <h2 className="
-            text-4xl
-            font-bold
-            text-gray-900
-            mt-3
-          ">
-            Let's Work Together
-          </h2>
-
-
-
-          <p className="
-            mt-5
-            text-gray-600
-            leading-8
-          ">
-            Communication creates change.
-            Reach out to us and let's build
-            a healthier and safer community together.
-          </p>
-
-
-
-
-
-          <div className="
-            mt-10
-            space-y-6
-          ">
-
-
-          {
-            contactInfo.map((item,index)=>(
-
-
-              <motion.a
-
-                key={index}
-
-                href={item.link}
-
-                whileHover={{
-                  x:10
-                }}
-
-                className="
-                  bg-white
-                  rounded-2xl
-                  p-6
-                  flex
-                  items-center
-                  gap-5
-                  shadow-md
-                  hover:shadow-xl
-                  transition
-                "
-
-              >
-
-
-                <div className="
-                  w-16
-                  h-16
-                  rounded-full
-                  bg-green-600
-                  text-white
-                  flex
-                  items-center
-                  justify-center
-                  text-2xl
-                ">
-
-                  {item.icon}
-
-                </div>
-
-
-
-                <div>
-
-                  <h3 className="
-                    text-xl
-                    font-bold
-                    text-gray-900
-                  ">
-                    {item.title}
-                  </h3>
-
-
-                  <p className="
-                    text-gray-600
-                  ">
-                    {item.text}
-                  </p>
-
-
-                </div>
-
-
-              </motion.a>
-
-
-            ))
-          }
+            <motion.p
+              initial={{opacity:0}}
+              animate={{opacity:1}}
+              transition={{delay:.3}}
+              className="mt-5 max-w-3xl mx-auto text-gray-200 text-lg"
+            >
+              Have questions, want to support our mission,
+              or join our awareness programs? We are here to listen.
+            </motion.p>
 
 
           </div>
 
-
-
-        </motion.div>
-
+        </div>
 
 
 
+        {/* CONTENT */}
+
+        <div className="max-w-7xl mx-auto px-6 py-20">
+
+
+          <div className="grid lg:grid-cols-2 gap-12">
+
+
+            {/* CONTACT INFORMATION */}
+
+            <div>
+
+
+              <motion.h2
+              initial={{opacity:0,x:-40}}
+              whileInView={{opacity:1,x:0}}
+              className="text-3xl md:text-4xl font-bold text-gray-900"
+              >
+                Contact Information
+              </motion.h2>
+
+
+              <p className="mt-4 text-gray-600 leading-relaxed">
+                We believe communication creates change.
+                Reach out to us and let's work together
+                to build a healthier community.
+              </p>
 
 
 
-        {/* FORM */}
+              <div className="mt-10 space-y-6">
 
 
-        <motion.div
+                {
+                  contactInfo.map((item,index)=>(
 
-          initial={{
-            opacity:0,
-            y:40
-          }}
+                    <motion.a
+                    key={index}
+                    href={item.link}
+                    initial={{opacity:0,x:-30}}
+                    whileInView={{opacity:1,x:0}}
+                    transition={{delay:index*0.2}}
+                    className="
+                    flex items-center gap-5
+                    bg-white rounded-2xl
+                    p-6 shadow-md
+                    hover:shadow-xl
+                    transition
+                    group
+                    "
+                    >
 
-          whileInView={{
-            opacity:1,
-            y:0
-          }}
 
-          className="
+                      <div className="
+                      w-16 h-16
+                      rounded-full
+                      bg-green-600
+                      text-white
+                      flex items-center justify-center
+                      text-2xl
+                      group-hover:scale-110
+                      transition
+                      ">
+                        {item.icon}
+                      </div>
+
+
+
+                      <div>
+
+                        <h3 className="font-bold text-xl">
+                          {item.title}
+                        </h3>
+
+
+                        <p className="text-gray-600">
+                          {item.text}
+                        </p>
+
+                      </div>
+
+
+                    </motion.a>
+
+                  ))
+                }
+
+
+              </div>
+
+
+            </div>
+
+
+
+
+            {/* PROFESSIONAL FORM */}
+
+
+            <motion.div
+            initial={{opacity:0,y:40}}
+            whileInView={{opacity:1,y:0}}
+            className="
             bg-white
             rounded-3xl
-            p-8
-            md:p-10
-            shadow-xl
-          "
-
-        >
+            shadow-2xl
+            p-6 sm:p-10
+            "
+            >
 
 
-
-          <h2 className="
-            text-3xl
-            font-bold
-            text-gray-900
-            mb-8
-          ">
-            Send Us A Message
-          </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                Send Us A Message
+              </h2>
 
 
 
-
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-6"
-          >
-
-
-            <div className="relative">
-
-              <FaUser className="
-                absolute
-                left-5
-                top-5
-                text-gray-400
-              "/>
+              <form
+              onSubmit={handleSubmit}
+              className="space-y-6"
+              >
 
 
-              <input
 
-                type="text"
+                <div className="relative">
 
-                name="name"
+                  <FaUser className="absolute left-5 top-5 text-gray-400"/>
 
-                value={form.name}
-
-                onChange={handleChange}
-
-                placeholder="Full Name"
-
-                required
-
-                className="
+                  <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Full Name"
+                  required
+                  className="
                   w-full
-                  pl-14
+                  pl-14 pr-5
                   py-4
                   rounded-xl
-                  border
+                  border border-gray-200
                   bg-gray-50
                   focus:bg-white
                   focus:border-green-600
+                  focus:ring-2
+                  focus:ring-green-200
                   outline-none
-                "
+                  transition
+                  "
+                  />
 
-              />
-
-            </div>
-
-
+                </div>
 
 
 
-            <div className="relative">
+                <div className="relative">
 
-              <FaEnvelope className="
-                absolute
-                left-5
-                top-5
-                text-gray-400
-              "/>
+                  <FaEnvelope className="absolute left-5 top-5 text-gray-400"/>
 
-
-              <input
-
-                type="email"
-
-                name="email"
-
-                value={form.email}
-
-                onChange={handleChange}
-
-                placeholder="Email Address"
-
-                required
-
-                className="
+                  <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Email Address"
+                  required
+                  className="
                   w-full
-                  pl-14
+                  pl-14 pr-5
                   py-4
                   rounded-xl
-                  border
+                  border border-gray-200
                   bg-gray-50
                   focus:bg-white
                   focus:border-green-600
+                  focus:ring-2
+                  focus:ring-green-200
                   outline-none
-                "
+                  transition
+                  "
+                  />
 
-              />
-
-
-            </div>
-
+                </div>
 
 
 
-
-            <textarea
-
-              rows="6"
-
-              name="message"
-
-              value={form.message}
-
-              onChange={handleChange}
-
-              placeholder="Write your message..."
-
-              required
-
-              className="
+                <textarea
+                rows="6"
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                placeholder="Write your message..."
+                required
+                className="
                 w-full
-                px-5
-                py-4
+                px-5 py-4
                 rounded-xl
-                border
+                border border-gray-200
                 bg-gray-50
+                resize-none
                 focus:bg-white
                 focus:border-green-600
+                focus:ring-2
+                focus:ring-green-200
                 outline-none
-              "
-
-            />
-
-
+                transition
+                "
+                />
 
 
 
-            <button
-
-              className="
+                <button
+                className="
                 w-full
                 py-4
                 rounded-xl
@@ -535,45 +332,36 @@ export default function Contact() {
                 font-bold
                 text-lg
                 flex
-                justify-center
                 items-center
+                justify-center
                 gap-3
-                transition
                 shadow-lg
-              "
+                hover:shadow-green-300
+                transition
+                "
+                >
 
-            >
+                  <FaPaperPlane/>
 
-              <FaPaperPlane/>
+                  Send Message
 
-              Send Message
-
-            </button>
-
-
-
-          </form>
+                </button>
 
 
+              </form>
 
-        </motion.div>
+
+            </motion.div>
 
 
+          </div>
 
 
         </div>
 
 
-      </div>
-
-
-    </section>
-
-
-
-    <Footer />
-
-
+      </section>
+   <Footer />
     </>
 
   );
