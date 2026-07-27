@@ -1,127 +1,174 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaPhoneAlt } from "react-icons/fa";
+
 
 export default function Leader() {
 
+
   const leaders = [
+
     {
-      name: "DUSENGIMANA Elie",
-      title: "Executive Director",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      name:"DUSENGIMANA Elie",
+      short:"D.E",
+      role:"President",
+      phone:"0791059455",
       description:
-        "Leads the organization with a strong vision of creating healthier, drug-free communities through education, prevention, and collaboration.",
+      "Leads CLUB ANTI DRUGS YVAN 14 by coordinating activities, partnerships, and strategies to fight drug abuse among youth."
     },
+
+
     {
-      name: "Sarah Williams",
-      title: "Program Manager",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      name:"DUSHIME ISINGIZWE Bonheur",
+      short:"I.B",
+      role:"Vice President",
+      phone:"0795926508",
       description:
-        "Coordinates community programs, awareness campaigns, and educational activities designed to prevent drug abuse among young people.",
+      "Supports organizational leadership, manages technology initiatives, and helps develop digital solutions for awareness programs."
     },
- {
-  name: "DUSHIME ISINGIZWE Bonheur",
-  title: "IT Director",
-  image: "https://randomuser.me/api/portraits/men/41.jpg",
-  description:
-    "Leads the organization's technology initiatives by managing digital solutions, maintaining IT systems, and supporting innovative tools that improve awareness, communication, and community impact.",
-},
+
+
     {
-      name: "Grace Johnson",
-      title: "Counseling Coordinator",
-      image: "https://randomuser.me/api/portraits/women/65.jpg",
+      name:"ABAHIRIWE Adorateur",
+      short:"A",
+      role:"Secretary",
+      phone:"0782020139",
       description:
-        "Provides guidance and support programs that help individuals and families overcome challenges related to drug abuse.",
+      "Responsible for documentation, communication, reports, and administrative coordination of club activities."
     },
+
+
     {
-      name: "David Wilson",
-      title: "Youth Engagement Officer",
-      image: "https://randomuser.me/api/portraits/men/52.jpg",
+      name:"IRADUKUNDA Delicia",
+      short:"I.D",
+      role:"Treasurer",
+      phone:"0791125282",
       description:
-        "Works with young people by creating empowerment programs that encourage healthy choices and responsible lifestyles.",
+      "Manages financial records and ensures transparency in the use of club resources."
     },
+
+
     {
-      name: "Emily Anderson",
-      title: "Communication Officer",
-      image: "https://randomuser.me/api/portraits/women/68.jpg",
+      name:"Uwizeyimana Vanessa",
+      short:"V.U",
+      role:"Development Officer",
+      phone:"Not Available",
       description:
-        "Manages communication strategies and awareness campaigns to spread important messages about drug prevention.",
+      "Supports development programs and helps organize activities that empower young people."
     },
+
+
     {
-      name: "Robert Martin",
-      title: "Research & Development Officer",
-      image: "https://randomuser.me/api/portraits/men/75.jpg",
+      name:"NSHIMIYIMANA Serge",
+      short:"N.S",
+      role:"Community Representative",
+      phone:"0787040673",
       description:
-        "Researches community needs and develops effective solutions to improve prevention and education programs.",
+      "Participates in community outreach and awareness campaigns against drug abuse."
     },
+
+
     {
-      name: "Linda Taylor",
-      title: "Volunteer Coordinator",
-      image: "https://randomuser.me/api/portraits/women/90.jpg",
+      name:"MUGWANEZA Fabrice",
+      short:"M.F",
+      role:"Youth Mobilizer",
+      phone:"0794012426",
       description:
-        "Coordinates volunteers and ensures community members actively participate in building a drug-free society.",
+      "Works with young people and encourages positive choices through education and engagement."
     },
+
+
+    {
+      name:"MUGISHA Keny Desile",
+      short:"K.D",
+      role:"Youth Support Officer",
+      phone:"Not Available",
+      description:
+      "Supports youth activities and contributes to building a drug-free community."
+    },
+
   ];
+
+
 
 
   return (
 
     <section className="py-24 bg-gray-50">
 
+
       <div className="max-w-7xl mx-auto px-6">
 
 
-        {/* Section Header */}
 
         <motion.div
 
-          initial={{
-            opacity:0,
-            y:40
-          }}
+        initial={{
+          opacity:0,
+          y:40
+        }}
 
-          whileInView={{
-            opacity:1,
-            y:0
-          }}
+        whileInView={{
+          opacity:1,
+          y:0
+        }}
 
-          transition={{
-            duration:0.7
-          }}
+        viewport={{
+          once:true
+        }}
 
-          className="text-center max-w-3xl mx-auto mb-16"
+        transition={{
+          duration:.7
+        }}
+
+        className="
+        text-center
+        max-w-3xl
+        mx-auto
+        mb-16
+        "
 
         >
 
+
           <span className="
-            text-green-600
-            uppercase
-            tracking-widest
-            font-semibold
-            text-sm
+          text-green-600
+          uppercase
+          tracking-widest
+          font-semibold
+          text-sm
           ">
-            Our Leadership
+
+          Our Leadership
+
           </span>
 
 
+
           <h2 className="
-            text-4xl
-            md:text-5xl
-            font-bold
-            text-gray-900
-            mt-4
+          text-4xl
+          md:text-5xl
+          font-bold
+          text-gray-900
+          mt-4
           ">
-            Meet Our Leadership
+
+          Meet Our Committee
+
           </h2>
 
 
+
           <p className="
-            text-gray-600
-            mt-5
-            leading-7
+          mt-5
+          text-gray-600
+          leading-7
           ">
-            Our dedicated leaders work together to create awareness,
-            support communities, and inspire positive actions toward
-            a drug-free future.
+
+          The dedicated leadership team of CLUB ANTI DRUGS YVAN 14
+          working together to prevent drug abuse, support youth,
+          and create a healthier community.
+
           </p>
 
 
@@ -130,142 +177,167 @@ export default function Leader() {
 
 
 
-        {/* Leadership Cards */}
+
 
         <div className="
-          grid
-          sm:grid-cols-2
-          lg:grid-cols-4
-          gap-8
+        grid
+        sm:grid-cols-2
+        lg:grid-cols-4
+        gap-8
         ">
 
 
-          {leaders.map((leader,index)=>(
+        {
+          leaders.map((leader,index)=>(
 
 
-            <motion.div
+          <motion.div
 
-              key={index}
+          key={index}
 
-              initial={{
-                opacity:0,
-                y:50
-              }}
+          initial={{
+            opacity:0,
+            y:50
+          }}
 
-              whileInView={{
-                opacity:1,
-                y:0
-              }}
+          whileInView={{
+            opacity:1,
+            y:0
+          }}
 
-              transition={{
-                duration:0.5,
-                delay:index * 0.1
-              }}
+          viewport={{
+            once:true
+          }}
 
-              whileHover={{
-                y:-10
-              }}
+          transition={{
+            duration:.5,
+            delay:index*0.1
+          }}
 
-              className="
-                bg-white
-                rounded-3xl
-                p-8
-                text-center
-                border
-                border-gray-100
-                shadow-md
-                hover:shadow-2xl
-                transition-all
-                duration-300
-              "
+          whileHover={{
+            y:-10
+          }}
 
-            >
+          className="
+          bg-white
+          rounded-3xl
+          p-8
+          text-center
+          border
+          border-gray-100
+          shadow-md
+          hover:shadow-2xl
+          transition
+          "
 
-
-              {/* Profile Image */}
-
-              <div className="
-                flex
-                justify-center
-                mb-6
-              ">
-
-                <div className="
-                  w-32
-                  h-32
-                  rounded-full
-                  overflow-hidden
-                  border-4
-                  border-green-100
-                  shadow-lg
-                ">
-
-                  <img
-                    src={leader.image}
-                    alt={leader.name}
-                    className="
-                      w-full
-                      h-full
-                      object-cover
-                      hover:scale-110
-                      transition
-                      duration-500
-                    "
-                  />
-
-                </div>
-
-              </div>
+          >
 
 
 
 
-              {/* Name */}
+          {/* INITIAL */}
 
-              <h3 className="
-                text-xl
-                font-bold
-                text-gray-900
-              ">
-                {leader.name}
-              </h3>
+          <div className="
+          w-24
+          h-24
+          mx-auto
+          rounded-full
+          bg-green-100
+          text-green-700
+          flex
+          items-center
+          justify-center
+          font-extrabold
+          text-2xl
+          mb-6
+          border-4
+          border-green-200
+          ">
 
+          {leader.short}
 
-
-              {/* Role */}
-
-              <p className="
-                text-green-600
-                font-semibold
-                text-sm
-                mt-2
-                mb-4
-              ">
-                {leader.title}
-              </p>
-
+          </div>
 
 
 
-              {/* Description */}
-
-              <p className="
-                text-gray-600
-                text-sm
-                leading-6
-              ">
-                {leader.description}
-              </p>
 
 
+          <h3 className="
+          text-lg
+          font-bold
+          text-gray-900
+          ">
 
-            </motion.div>
+          {leader.name}
+
+          </h3>
 
 
-          ))}
+
+
+
+          <p className="
+          text-green-600
+          font-semibold
+          mt-2
+          ">
+
+          {leader.role}
+
+          </p>
+
+
+
+
+
+
+          {/* PHONE */}
+
+          <div className="
+          flex
+          justify-center
+          items-center
+          gap-2
+          mt-3
+          text-gray-600
+          text-sm
+          ">
+
+          <FaPhoneAlt className="text-green-600"/>
+
+          {leader.phone}
+
+          </div>
+
+
+
+
+
+
+
+          <p className="
+          text-gray-600
+          text-sm
+          leading-6
+          mt-5
+          ">
+
+          {leader.description}
+
+          </p>
+
+
+
+          </motion.div>
+
+
+          ))
+        }
+
 
 
         </div>
+
 
 
       </div>
@@ -274,4 +346,5 @@ export default function Leader() {
     </section>
 
   );
+
 }

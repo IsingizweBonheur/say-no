@@ -71,42 +71,133 @@ export default function Contact() {
       <Navbar />
 
 
-      <section className="bg-gray-50 min-h-screen pt-24">
+      <section className="bg-gray-50 min-h-screen">
+{/* DARK BLUE HEADER WITH CURVE */}
+
+<div
+  className="
+    bg-[#06283D]
+    py-32
+    px-6
+    relative
+    overflow-hidden
+  "
+>
 
 
-        {/* DARK BLUE HEADER */}
+  {/* Gradient Background */}
 
-        <div className="bg-[#06283D] py-20 px-6 relative overflow-hidden">
-
-          <div className="absolute inset-0 bg-gradient-to-r from-[#06283D] via-[#0B3954] to-[#06283D] opacity-90"></div>
-
-
-          <div className="relative max-w-6xl mx-auto text-center text-white">
-
-            <motion.h1
-              initial={{opacity:0,y:40}}
-              animate={{opacity:1,y:0}}
-              transition={{duration:.7}}
-              className="text-4xl md:text-6xl font-extrabold"
-            >
-              Get In Touch
-            </motion.h1>
+  <div
+    className="
+      absolute
+      inset-0
+      bg-gradient-to-r
+      from-[#06283D]
+      via-[#0B3954]
+      to-[#06283D]
+      opacity-90
+    "
+  ></div>
 
 
-            <motion.p
-              initial={{opacity:0}}
-              animate={{opacity:1}}
-              transition={{delay:.3}}
-              className="mt-5 max-w-3xl mx-auto text-gray-200 text-lg"
-            >
-              Have questions, want to support our mission,
-              or join our awareness programs? We are here to listen.
-            </motion.p>
+
+  {/* Header Content */}
+
+  <div
+    className="
+      relative
+      z-10
+      max-w-6xl
+      mx-auto
+      text-center
+      text-white
+    "
+  >
 
 
-          </div>
+    <motion.h1
 
-        </div>
+      initial={{
+        opacity:0,
+        y:40
+      }}
+
+      animate={{
+        opacity:1,
+        y:0
+      }}
+
+      transition={{
+        duration:.7
+      }}
+
+      className="
+        text-4xl
+        md:text-6xl
+        font-extrabold
+        leading-tight
+      "
+
+    >
+
+      Get In Touch
+
+    </motion.h1>
+
+
+
+    <motion.p
+
+      initial={{
+        opacity:0
+      }}
+
+      animate={{
+        opacity:1
+      }}
+
+      transition={{
+        delay:.3
+      }}
+
+      className="
+        mt-5
+        max-w-3xl
+        mx-auto
+        text-gray-200
+        text-lg
+        leading-relaxed
+      "
+
+    >
+
+      Have questions, want to support our mission,
+      or join our awareness programs? We are here to listen.
+
+    </motion.p>
+
+
+  </div>
+
+
+
+
+  {/* Bottom Curve */}
+
+  <div
+    className="
+      absolute
+      bottom-0
+      left-0
+      w-full
+      h-20
+      bg-gray-50
+      rounded-t-[50%]
+    "
+  ></div>
+
+
+</div>
 
 
 
