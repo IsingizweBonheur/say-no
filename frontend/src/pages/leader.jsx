@@ -56,7 +56,14 @@ export default function Leader() {
       description:
       "Supports development programs and helps organize activities that empower young people."
     },
-
+   {
+  name: "YOBOKA Gad",
+  short: "Y.G",
+  role: "Health and Wellness Coordinator",
+  phone: "0780651037",
+  description:
+    "Promotes the health and well-being of members by coordinating health initiatives, raising awareness, and supporting programs that improve community wellness."
+},
 
     {
       name:"NSHIMIYIMANA Serge",
