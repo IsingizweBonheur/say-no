@@ -56,10 +56,10 @@ export default function Leader() {
 
     {
       name: "KAMANA Levis",
-      // image: "https://i.imgur.com/ZMSxxSY.jpeg",
+      image: "https://i.imgur.com/lLnJzLV.jpeg",
       short: "K.L",
       role: "Health and Wellness Coordinator",
-      phone: "Not Available",
+      phone: "0784078826",
       description:
         "Promotes the health and well-being of members by coordinating health initiatives, raising awareness, and supporting programs that improve community wellness.",
     },
