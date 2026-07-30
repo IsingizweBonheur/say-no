@@ -36,7 +36,7 @@ export default function Leader() {
 
     {
       name: "IRADUKUNDA Delicia",
-      image: "https://i.imgur.com/YCpa7D8.jpeg",
+      image: "https://i.imgur.com/TEsXfqW.jpeg",
       short: "I.D",
       role: "Treasurer",
       phone: "0791125282",
@@ -66,7 +66,7 @@ export default function Leader() {
 
     {
       name: "YOBOKA Gad",
-      image: "https://i.imgur.com/J6WfnR3.jpeg",
+      image: "https://i.imgur.com/7TwV7VR.jpeg",
       short: "Y.G",
       role: "Community Representative",
       phone: "0780651037",
@@ -86,7 +86,7 @@ export default function Leader() {
 
     {
       name: "MUSONI Jean Bosco",
-      image: "https://i.imgur.com/T2dT6to.jpeg",
+      image: "https://i.imgur.com/7nKQyBM.jpeg",
       short: "M.B",
       role: "Youth Support Officer",
       phone: "0724716621",
