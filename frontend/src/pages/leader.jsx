@@ -52,8 +52,9 @@ export default function Leader() {
     },
 
     {
-      name: "NAKAMANA Levis",
-      short: "N.L",
+      name: "KAMANA Levis",
+      image: "https://i.imgur.com/ZMSxxSY.jpeg",
+      short: "K.L",
       role: "Health and Wellness Coordinator",
       phone: "Not Available",
       description:
