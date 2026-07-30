@@ -28,6 +28,7 @@ export default function Leader() {
       name: "ABAHIRIWE Adorateur",
       short: "A",
       role: "Secretary",
+      image: "https://i.imgur.com/OjHH8ud.jpeg",
       phone: "0782020139",
       description:
         "Responsible for documentation, communication, reports, and administrative coordination of club activities.",
@@ -35,6 +36,7 @@ export default function Leader() {
 
     {
       name: "IRADUKUNDA Delicia",
+      image: "https://i.imgur.com/YCpa7D8.jpeg",
       short: "I.D",
       role: "Treasurer",
       phone: "0791125282",
@@ -44,6 +46,7 @@ export default function Leader() {
 
     {
       name: "Uwizeyimana Vanessa",
+      image: "https://i.imgur.com/y2DwArI.jpeg",
       short: "V.U",
       role: "Development Officer",
       phone: "Not Available",
@@ -53,7 +56,7 @@ export default function Leader() {
 
     {
       name: "KAMANA Levis",
-      image: "https://i.imgur.com/ZMSxxSY.jpeg",
+      // image: "https://i.imgur.com/ZMSxxSY.jpeg",
       short: "K.L",
       role: "Health and Wellness Coordinator",
       phone: "Not Available",
@@ -63,6 +66,7 @@ export default function Leader() {
 
     {
       name: "YOBOKA Gad",
+      image: "https://i.imgur.com/J6WfnR3.jpeg",
       short: "Y.G",
       role: "Community Representative",
       phone: "0780651037",
@@ -72,6 +76,7 @@ export default function Leader() {
 
     {
       name: "MUGWANEZA Fabrice",
+      image: "https://i.imgur.com/5Azmp7D.jpeg",
       short: "M.F",
       role: "Youth Mobilizer",
       phone: "0794012426",
@@ -80,10 +85,11 @@ export default function Leader() {
     },
 
     {
-      name: "MUGISHA Keny Desile",
-      short: "K.D",
+      name: "MUSONI Jean Bosco",
+      image: "https://i.imgur.com/T2dT6to.jpeg",
+      short: "M.B",
       role: "Youth Support Officer",
-      phone: "Not Available",
+      phone: "0724716621",
       description:
         "Supports youth activities and contributes to building a drug-free community.",
     },
