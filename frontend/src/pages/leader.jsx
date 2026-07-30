@@ -52,19 +52,19 @@ export default function Leader() {
     },
 
     {
-      name: "YOBOKA Gad",
-      short: "Y.G",
+      name: "NAKAMANA Levis",
+      short: "N.L",
       role: "Health and Wellness Coordinator",
-      phone: "0780651037",
+      phone: "Not Available",
       description:
         "Promotes the health and well-being of members by coordinating health initiatives, raising awareness, and supporting programs that improve community wellness.",
     },
 
     {
-      name: "NSHIMIYIMANA Serge",
-      short: "N.S",
+      name: "YOBOKA Gad",
+      short: "Y.G",
       role: "Community Representative",
-      phone: "0787040673",
+      phone: "0780651037",
       description:
         "Participates in community outreach and awareness campaigns against drug abuse.",
     },
