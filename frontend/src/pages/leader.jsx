@@ -28,7 +28,7 @@ export default function Leader() {
       name: "ABAHIRIWE Adorateur",
       short: "A",
       role: "Secretary",
-      image: "https://i.imgur.com/OjHH8ud.jpeg",
+      image: "https://i.imgur.com/O46tEap.jpeg",
       phone: "0782020139",
       description:
         "Responsible for documentation, communication, reports, and administrative coordination of club activities.",
