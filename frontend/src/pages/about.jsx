@@ -9,7 +9,7 @@ import {
 import hero from "../assets/hero.jpeg";
 import Navbar from "../component/navbar";
 import Footer from "../component/footer";
-
+import Partner from './partener';
 import Vision from "./vision";
 import Leader from "./leader";
 
@@ -527,7 +527,7 @@ export default function About() {
         <Leader />
 
 
-
+      <Partner />
       </section>
 
 
