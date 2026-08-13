@@ -7,7 +7,7 @@ import {
   FaPaperPlane,
   FaUser,
 } from "react-icons/fa";
-
+import SEO from "../seo/seo";
 import Navbar from "../component/navbar";
 import Footer from "../component/footer";
 
@@ -68,6 +68,11 @@ export default function Contact() {
   return (
 
     <>
+    <SEO
+  title="Contact Us | Say No to Drug"
+  description="Contact Say No to Drug to learn more about our drug prevention programs, campaigns, partnerships, and community initiatives."
+  url="https://antidrug.com/contact"
+/>
       <Navbar />
 
 

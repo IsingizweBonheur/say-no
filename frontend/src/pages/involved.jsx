@@ -14,7 +14,7 @@ import {
 import Navbar from "../component/navbar";
 import Footer from "../component/footer";
 import heroImage from "../assets/hero.jpeg";
-
+import SEO from "../seo/seo";
 const INVOLVEMENT_COLORS = {
   volunteer: "#E74C3C",
   ambassador: "#3498DB",
@@ -137,6 +137,11 @@ export default function GetInvolved() {
 
   return (
     <>
+    <SEO
+  title="Get Involved | Say No to Drug"
+  description="Join Say No to Drug and help promote drug prevention, awareness, and healthier communities."
+  url="https://antidrug.com/get-involved"
+/>
       <Navbar />
       <div className="bg-gray-50 min-h-screen font-['Inter',-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif]">
         

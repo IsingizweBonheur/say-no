@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import campaignOne from "../assets/campain.png";
 import campaignTwo from "../assets/campains.png";
 import { FaBullhorn, FaHandsHelping } from "react-icons/fa";
-
+import SEO from "../seo/seo";
 import Navbar from "../component/navbar";
 import Footer from "../component/footer";
 
@@ -39,6 +39,11 @@ export default function Campain() {
   return (
 
     <>
+    <SEO
+  title="Drug Prevention Campaigns | Say No to Drug"
+  description="Explore Say No to Drug campaigns raising awareness about drug abuse prevention and encouraging people to make healthy and responsible choices."
+  url="https://antidrug.com/campaigns"
+/>
 
       <Navbar />
 
@@ -318,4 +323,4 @@ export default function Campain() {
 
   );
 
-}
+  }

@@ -10,6 +10,7 @@ import {
   FaTimes,
   FaArrowRight,
 } from "react-icons/fa";
+import SEO from "../seo/seo";
 import Navbar from "../component/navbar";
 import Footer from "../component/footer";
 import heroImage from "../assets/hero.jpeg";
@@ -162,6 +163,7 @@ function ProgramModal({ program, onClose }) {
   }, [onClose]);
 
   return (
+  
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -261,6 +263,11 @@ export default function Programs() {
 
   return (
     <>
+      <SEO
+  title="Programs | Say No to Drug"
+  description="Explore drug prevention, awareness, education, and community programs from Say No to Drug."
+  url="https://antidrug.com/programs"
+/>
       <Navbar />
       <div className="bg-gray-50 min-h-screen font-['Inter',-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Helvetica,Arial,sans-serif]">
         

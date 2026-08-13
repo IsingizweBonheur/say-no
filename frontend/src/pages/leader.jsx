@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
-
+import SEO from "../seo/seo";
 export default function Leader() {
   const leaders = [
     {
@@ -97,6 +97,11 @@ export default function Leader() {
 
   return (
     <section className="py-24 bg-gray-50">
+      <SEO
+  title="Our Leaders | Say No to Drug"
+  description="Meet the leaders and team members working with Say No to Drug to promote drug abuse prevention, awareness, and healthier communities."
+  url="https://antidrug.com/leaders"
+/>
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <motion.div

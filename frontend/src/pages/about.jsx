@@ -6,6 +6,7 @@ import {
   FaBullhorn,
   FaShieldAlt,
 } from "react-icons/fa";
+import SEO from "../seo/seo";
 import hero from "../assets/hero.jpeg";
 import Navbar from "../component/navbar";
 import Footer from "../component/footer";
@@ -52,6 +53,11 @@ export default function About() {
   return (
 
     <>
+    <SEO
+  title="About Us | Say No to Drug"
+  description="Learn about Say No to Drug, our mission, vision, and commitment to preventing drug abuse and promoting healthy, drug-free communities."
+  url="https://antidrug.com/about"
+/>
 
       <Navbar />
 
