@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPlay, FaTimes } from "react-icons/fa";
+import { FaPlay, FaTimes, FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import heroImage from "../assets/hero.jpeg";
 
 const Hero = () => {
@@ -64,12 +65,16 @@ const Hero = () => {
             transition={{ delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 mt-10"
           >
-            <button
-              className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-xl font-semibold text-white transition"
+            {/* Donate Button */}
+            <Link
+              to="/donate"
+              className="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-xl font-semibold text-white transition"
             >
-              Get Involved
-            </button>
+              <FaHeart />
+              Donate
+            </Link>
 
+            {/* Watch Video Button */}
             <button
               onClick={() => setShowVideo(true)}
               className="flex items-center justify-center gap-3 border border-green-500 text-white px-8 py-4 rounded-xl hover:bg-green-500 transition"
