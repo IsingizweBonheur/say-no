@@ -5,22 +5,26 @@ import {
   FaCopy,
   FaCheck,
   FaTimes,
+  FaArrowRight,
 } from "react-icons/fa";
 
-export default function Donation() {
+export default function Donation({ onClose }) {
   const [selectedMethod, setSelectedMethod] = useState(null);
   const [copied, setCopied] = useState(false);
 
   const donationMethods = {
     mobile: {
       title: "Mobile Money",
+      label: "MTN",
       icon: <FaMobileAlt />,
       accountName: "Say No To Drugs",
       accountNumber: "+250 7XX XXX XXX",
       details: "MTN Mobile Money",
     },
+
     equity: {
       title: "Equity Bank",
+      label: "EQUITY",
       icon: <FaUniversity />,
       accountName: "Say No To Drugs",
       accountNumber: "XXXXXXXXXXXX",
@@ -38,136 +42,169 @@ export default function Donation() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-16 bg-black/20">
-
-      {/* Donation Modal */}
-      <div className="relative w-full max-w-lg rounded-3xl bg-white/90 backdrop-blur-xl border border-white/40 shadow-2xl p-6 md:p-8">
-
-        {/* Close Button */}
-        <button
-          onClick={() => setSelectedMethod(null)}
-          className="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 hover:bg-red-500 hover:text-white text-gray-600 flex items-center justify-center transition"
-        >
-          <FaTimes />
-        </button>
+    <div className="w-full">
+      {/* Main Donation Modal */}
+      <div className="relative w-full max-w-lg mx-auto rounded-3xl bg-white shadow-2xl overflow-hidden">
 
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center text-2xl">
-            ❤️
+        <div className="px-6 md:px-8 py-6 border-b border-gray-100">
+          <div className="flex items-center gap-4">
+
+            {/* Header Icon */}
+            <div className="w-14 h-14 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center text-xl">
+              {selectedMethod ? (
+                donationMethods[selectedMethod].icon
+              ) : (
+                <FaUniversity />
+              )}
+            </div>
+
+            <div className="flex-1">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
+                {selectedMethod
+                  ? donationMethods[selectedMethod].title
+                  : "Donation"}
+              </h2>
+
+              <p className="text-gray-500 text-sm mt-1">
+                {selectedMethod
+                  ? donationMethods[selectedMethod].details
+                  : "Choose a payment method"}
+              </p>
+            </div>
+
+            {/* Close */}
+            <button
+              onClick={() => {
+                if (onClose) {
+                  onClose();
+                } else {
+                  setSelectedMethod(null);
+                }
+              }}
+              className="w-11 h-11 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center hover:bg-red-500 hover:text-white transition"
+            >
+              <FaTimes />
+            </button>
           </div>
-
-          <h2 className="text-3xl font-extrabold text-gray-900">
-            Support Our Mission
-          </h2>
-
-          <p className="text-gray-600 mt-3 leading-relaxed">
-            Your contribution helps us prevent drug abuse, empower young
-            people, and build a healthier future.
-          </p>
         </div>
 
-        {/* Donation Options */}
+        {/* Choose Payment Method */}
         {!selectedMethod && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="p-6 md:p-8">
 
-            {/* Mobile Money */}
-            <button
-              onClick={() => setSelectedMethod("mobile")}
-              className="group rounded-2xl border border-gray-200 bg-white p-6 text-left hover:border-green-500 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center text-xl mb-4 group-hover:bg-green-600 group-hover:text-white transition">
-                <FaMobileAlt />
-              </div>
-
-              <h3 className="font-bold text-gray-900 text-lg">
-                Mobile Money
+            <div className="mb-6">
+              <h3 className="text-xl font-bold text-gray-900">
+                Choose Payment Method
               </h3>
 
-              <p className="text-sm text-gray-500 mt-1">
-                Donate using MTN Mobile Money
+              <p className="text-gray-500 text-sm mt-1">
+                Select how you would like to make your donation.
               </p>
+            </div>
 
-              <span className="inline-block mt-4 text-sm font-semibold text-green-600">
-                Donate →
-              </span>
-            </button>
+            <div className="space-y-4">
 
-            {/* Equity Bank */}
-            <button
-              onClick={() => setSelectedMethod("equity")}
-              className="group rounded-2xl border border-gray-200 bg-white p-6 text-left hover:border-blue-900 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center text-xl mb-4 group-hover:bg-blue-900 group-hover:text-white transition">
-                <FaUniversity />
-              </div>
+              {/* Mobile Money */}
+              <button
+                onClick={() => setSelectedMethod("mobile")}
+                className="w-full group flex items-center gap-4 p-4 md:p-5 rounded-2xl border-2 border-gray-100 bg-white hover:border-green-500 hover:shadow-md transition-all duration-300 text-left"
+              >
+                <div className="w-14 h-14 rounded-xl bg-green-50 text-green-600 flex items-center justify-center text-xl shrink-0 group-hover:bg-green-600 group-hover:text-white transition">
+                  <FaMobileAlt />
+                </div>
 
-              <h3 className="font-bold text-gray-900 text-lg">
-                Equity Bank
-              </h3>
+                <div className="flex-1 min-w-0">
+                  <span className="block text-xs font-bold tracking-wider text-gray-400 mb-1">
+                    MTN
+                  </span>
 
-              <p className="text-sm text-gray-500 mt-1">
-                Donate through our bank account
+                  <h4 className="text-lg font-bold text-gray-900">
+                    Mobile Money
+                  </h4>
+                </div>
+
+                <div className="w-11 h-11 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center group-hover:bg-green-100 group-hover:text-green-600 transition shrink-0">
+                  <FaArrowRight />
+                </div>
+              </button>
+
+              {/* Equity Bank */}
+              <button
+                onClick={() => setSelectedMethod("equity")}
+                className="w-full group flex items-center gap-4 p-4 md:p-5 rounded-2xl border-2 border-gray-100 bg-white hover:border-blue-900 hover:shadow-md transition-all duration-300 text-left"
+              >
+                <div className="w-14 h-14 rounded-xl bg-blue-50 text-blue-900 flex items-center justify-center text-xl shrink-0 group-hover:bg-blue-900 group-hover:text-white transition">
+                  <FaUniversity />
+                </div>
+
+                <div className="flex-1 min-w-0">
+                  <span className="block text-xs font-bold tracking-wider text-gray-400 mb-1">
+                    EQUITY
+                  </span>
+
+                  <h4 className="text-lg font-bold text-gray-900">
+                    Equity Bank Rwanda
+                  </h4>
+                </div>
+
+                <div className="w-11 h-11 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center group-hover:bg-blue-100 group-hover:text-blue-900 transition shrink-0">
+                  <FaArrowRight />
+                </div>
+              </button>
+
+            </div>
+
+            {/* Security Notice */}
+            <div className="mt-6 rounded-xl bg-blue-50 border border-blue-100 px-4 py-3">
+              <p className="text-xs text-blue-700 text-center">
+                Please verify the account details before making your donation.
               </p>
-
-              <span className="inline-block mt-4 text-sm font-semibold text-blue-900">
-                Donate →
-              </span>
-            </button>
-
+            </div>
           </div>
         )}
 
         {/* Account Details */}
         {selectedMethod && (
-          <div className="animate-[fadeIn_0.3s_ease-in-out]">
+          <div className="p-6 md:p-8">
 
+            {/* Back */}
             <button
-              onClick={() => setSelectedMethod(null)}
-              className="mb-6 text-sm font-semibold text-gray-500 hover:text-gray-900 transition"
+              onClick={() => {
+                setSelectedMethod(null);
+                setCopied(false);
+              }}
+              className="text-sm font-semibold text-gray-500 hover:text-gray-900 transition mb-6"
             >
-              ← Back to donation methods
+              ← Choose another payment method
             </button>
 
-            <div className="rounded-2xl bg-gray-50 border border-gray-200 p-6">
-
-              {/* Method Header */}
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center text-xl">
-                  {donationMethods[selectedMethod].icon}
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {donationMethods[selectedMethod].title}
-                  </h3>
-
-                  <p className="text-sm text-gray-500">
-                    {donationMethods[selectedMethod].details}
-                  </p>
-                </div>
-              </div>
+            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
 
               {/* Account Name */}
-              <div className="mb-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">
+              <div className="mb-5">
+                <span className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
                   Account Name
-                </p>
+                </span>
 
-                <p className="font-semibold text-gray-900">
+                <p className="text-lg font-bold text-gray-900">
                   {donationMethods[selectedMethod].accountName}
                 </p>
               </div>
 
               {/* Account Number */}
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">
-                  Account / Phone Number
-                </p>
+                <span className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+                  {selectedMethod === "mobile"
+                    ? "Mobile Number"
+                    : "Account Number"}
+                </span>
 
                 <div className="flex items-center gap-2">
-                  <div className="flex-1 bg-white border border-gray-200 rounded-xl px-4 py-3 font-bold text-gray-900 tracking-wide">
-                    {donationMethods[selectedMethod].accountNumber}
+                  <div className="flex-1 min-w-0 bg-white border border-gray-200 rounded-xl px-4 py-3">
+                    <p className="font-bold text-gray-900 tracking-wide truncate">
+                      {donationMethods[selectedMethod].accountNumber}
+                    </p>
                   </div>
 
                   <button
@@ -176,7 +213,7 @@ export default function Donation() {
                         donationMethods[selectedMethod].accountNumber
                       )
                     }
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition ${
+                    className={`w-12 h-12 rounded-xl flex items-center justify-center text-white transition shrink-0 ${
                       copied
                         ? "bg-green-600"
                         : "bg-blue-950 hover:bg-blue-900"
@@ -187,24 +224,16 @@ export default function Donation() {
                   </button>
                 </div>
               </div>
+            </div>
 
-              {/* Thank You */}
-              <div className="mt-6 p-4 rounded-xl bg-green-50 border border-green-100">
-                <p className="text-sm text-green-800 text-center">
-                  Thank you for supporting the{" "}
-                  <span className="font-bold">Say No To Drugs</span> campaign.
-                </p>
-              </div>
-
+            {/* Donation Note */}
+            <div className="mt-5 text-center">
+              <p className="text-sm text-gray-500">
+                Thank you for supporting our mission.
+              </p>
             </div>
           </div>
         )}
-
-        {/* Footer */}
-        <p className="text-center text-xs text-gray-400 mt-7">
-          Every contribution makes a difference.
-        </p>
-
       </div>
     </div>
   );
