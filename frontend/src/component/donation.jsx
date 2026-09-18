@@ -78,7 +78,7 @@ export default function Donation() {
 
             <div className="mb-6">
               <h3 className="text-xl font-bold text-gray-900">
-                Choose Payment Method
+                Choose Donation Method
               </h3>
 
               <p className="text-gray-500 text-sm mt-1">
