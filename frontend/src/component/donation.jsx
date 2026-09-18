@@ -4,11 +4,10 @@ import {
   FaUniversity,
   FaCopy,
   FaCheck,
-  FaTimes,
   FaArrowRight,
 } from "react-icons/fa";
 
-export default function Donation({ onClose }) {
+export default function Donation() {
   const [selectedMethod, setSelectedMethod] = useState(null);
   const [copied, setCopied] = useState(false);
 
@@ -43,7 +42,6 @@ export default function Donation({ onClose }) {
 
   return (
     <div className="w-full">
-      {/* Main Donation Modal */}
       <div className="relative w-full max-w-lg mx-auto rounded-3xl bg-white shadow-2xl overflow-hidden">
 
         {/* Header */}
@@ -51,15 +49,13 @@ export default function Donation({ onClose }) {
           <div className="flex items-center gap-4">
 
             {/* Header Icon */}
-            <div className="w-14 h-14 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center text-xl">
-              {selectedMethod ? (
-                donationMethods[selectedMethod].icon
-              ) : (
-                <FaUniversity />
-              )}
+            <div className="w-14 h-14 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center text-xl shrink-0">
+              {selectedMethod
+                ? donationMethods[selectedMethod].icon
+                : <FaUniversity />}
             </div>
 
-            <div className="flex-1">
+            <div>
               <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
                 {selectedMethod
                   ? donationMethods[selectedMethod].title
@@ -73,19 +69,6 @@ export default function Donation({ onClose }) {
               </p>
             </div>
 
-            {/* Close */}
-            <button
-              onClick={() => {
-                if (onClose) {
-                  onClose();
-                } else {
-                  setSelectedMethod(null);
-                }
-              }}
-              className="w-11 h-11 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center hover:bg-red-500 hover:text-white transition"
-            >
-              <FaTimes />
-            </button>
           </div>
         </div>
 
@@ -161,6 +144,7 @@ export default function Donation({ onClose }) {
                 Please verify the account details before making your donation.
               </p>
             </div>
+
           </div>
         )}
 
@@ -224,16 +208,18 @@ export default function Donation({ onClose }) {
                   </button>
                 </div>
               </div>
+
             </div>
 
-            {/* Donation Note */}
             <div className="mt-5 text-center">
               <p className="text-sm text-gray-500">
                 Thank you for supporting our mission.
               </p>
             </div>
+
           </div>
         )}
+
       </div>
     </div>
   );
