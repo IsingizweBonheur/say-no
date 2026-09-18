@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlay, FaTimes, FaHeart } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import heroImage from "../assets/hero.jpeg";
+import Donation from "./donation";
 
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
+  const [showDonation, setShowDonation] = useState(false);
 
   return (
     <section className="relative min-h-screen overflow-hidden">
@@ -66,13 +67,13 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 mt-10"
           >
             {/* Donate Button */}
-            <Link
-              to="/donate"
+            <button
+              onClick={() => setShowDonation(true)}
               className="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-xl font-semibold text-white transition"
             >
               <FaHeart />
               Donate
-            </Link>
+            </button>
 
             {/* Watch Video Button */}
             <button
@@ -86,6 +87,38 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* DONATION MODAL */}
+      <AnimatePresence>
+        {showDonation && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4 py-8 overflow-y-auto"
+            onClick={() => setShowDonation(false)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.85, y: 30 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full max-w-lg"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setShowDonation(false)}
+                className="absolute -top-3 -right-3 z-20 w-10 h-10 rounded-full bg-white text-gray-700 shadow-lg flex items-center justify-center hover:bg-red-500 hover:text-white transition"
+              >
+                <FaTimes />
+              </button>
+
+              <Donation />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* VIDEO POPUP */}
       <AnimatePresence>
         {showVideo && (
@@ -96,7 +129,6 @@ const Hero = () => {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
           >
-            {/* Video Card */}
             <motion.div
               onClick={(e) => e.stopPropagation()}
               initial={{ scale: 0.8, opacity: 0 }}
