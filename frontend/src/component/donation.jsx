@@ -65,7 +65,7 @@ export default function Donation() {
               <p className="text-gray-500 text-sm mt-1">
                 {selectedMethod
                   ? donationMethods[selectedMethod].details
-                  : "Choose a payment method"}
+                  : "Choose  donation method"}
               </p>
             </div>
 
