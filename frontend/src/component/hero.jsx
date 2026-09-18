@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPlay, FaTimes, FaHeart } from "react-icons/fa";
+import { FaPlay, FaTimes } from "react-icons/fa";
 import heroImage from "../assets/hero.jpeg";
 import Donation from "./donation";
 
@@ -71,7 +71,6 @@ const Hero = () => {
               onClick={() => setShowDonation(true)}
               className="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-8 py-4 rounded-xl font-semibold text-white transition"
             >
-              <FaHeart />
               Donate
             </button>
 
