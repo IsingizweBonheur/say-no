@@ -16,8 +16,8 @@ export default function Donation() {
       title: "Mobile Money",
       label: "MTN",
       icon: <FaMobileAlt />,
-      accountName: "Say No To Drugs",
-      accountNumber: "+250 7XX XXX XXX",
+      accountName: "DUSENGIMANA Elie",
+      accountNumber: "+250 788 628 312",
       details: "MTN Mobile Money",
     },
 
