@@ -25,8 +25,8 @@ export default function Donation() {
       title: "Equity Bank",
       label: "EQUITY",
       icon: <FaUniversity />,
-      accountName: "Say No To Drugs",
-      accountNumber: "XXXXXXXXXXXX",
+      accountName: "DUSHIME ISINGIZWE Bonheur",
+      accountNumber: "4033101408018",
       details: "Equity Bank Rwanda",
     },
   };
