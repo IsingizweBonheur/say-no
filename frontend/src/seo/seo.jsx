@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet-async";
+import logo from "../assets/logo.png";
 
 export default function SEO({
   title = "Club Anti-Drugs | Drug Abuse Prevention in Rwanda",
   description = "Club Anti-Drugs promotes drug abuse prevention, awareness, education, and healthy choices among young people and communities in Rwanda.",
   keywords =
     "Club Anti-Drugs, drug abuse prevention Rwanda, drug awareness Rwanda, drug prevention, youth drug prevention, drug-free Rwanda, drug abuse awareness",
-  image = "https://clubantidrugs.rw/og-image.png",
   url = "https://clubantidrugs.rw/",
   type = "website",
 }) {
@@ -49,7 +49,7 @@ export default function SEO({
         content="index, follow"
       />
 
-      {/* Canonical URL */}
+      {/* Canonical */}
       <link
         rel="canonical"
         href={url}
@@ -82,12 +82,12 @@ export default function SEO({
 
       <meta
         property="og:image"
-        content={image}
+        content={logo}
       />
 
       <meta
         property="og:image:alt"
-        content={title}
+        content={`${siteName} logo`}
       />
 
       <meta
@@ -103,16 +103,6 @@ export default function SEO({
       <meta
         property="og:locale"
         content="en_RW"
-      />
-
-      <meta
-        property="og:image:width"
-        content="1200"
-      />
-
-      <meta
-        property="og:image:height"
-        content="630"
       />
 
       {/* ================================
@@ -136,12 +126,12 @@ export default function SEO({
 
       <meta
         name="twitter:image"
-        content={image}
+        content={logo}
       />
 
       <meta
         name="twitter:image:alt"
-        content={title}
+        content={`${siteName} logo`}
       />
 
       {/* ================================
@@ -151,16 +141,6 @@ export default function SEO({
       <meta
         name="theme-color"
         content="#ffffff"
-      />
-
-      <meta
-        name="apple-mobile-web-app-capable"
-        content="yes"
-      />
-
-      <meta
-        name="apple-mobile-web-app-status-bar-style"
-        content="default"
       />
 
       <meta
@@ -178,21 +158,6 @@ export default function SEO({
       />
 
       {/* ================================
-          FAVICON
-      ================================= */}
-
-      <link
-        rel="icon"
-        type="image/png"
-        href="/favicon.png"
-      />
-
-      <link
-        rel="apple-touch-icon"
-        href="/apple-touch-icon.png"
-      />
-
-      {/* ================================
           ORGANIZATION STRUCTURED DATA
       ================================= */}
 
@@ -202,7 +167,7 @@ export default function SEO({
           "@type": "Organization",
           name: siteName,
           url: "https://clubantidrugs.rw/",
-          logo: "https://clubantidrugs.rw/logo.png",
+          logo: logo,
           description:
             "Club Anti-Drugs promotes drug abuse prevention, awareness, education, and healthy choices among young people and communities in Rwanda.",
           areaServed: {
